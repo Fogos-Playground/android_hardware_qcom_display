@@ -280,6 +280,10 @@ struct LayerFlags {
                               //!< This flag shall be set by client to indicate that the layer
                               //!< is used for front-buffer rendering
       // clang-format on
+#ifdef UDFPS_ZPOS
+      uint32_t fod_pressed : 1;    //!< This flag shall be set internally to mark the fod pressed
+                                   //!< layer
+#endif
     };
 
     uint32_t flags = 0;       //!< For initialization purpose only.
